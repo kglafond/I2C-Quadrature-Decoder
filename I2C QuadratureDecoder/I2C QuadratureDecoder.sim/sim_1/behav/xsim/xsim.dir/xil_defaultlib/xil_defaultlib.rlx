@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v,1567056596,verilog,,C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v,,i2c_mstr,,,,,,,,
+C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v,1567487669,verilog,,,,i2c_peri_tb,,,,,,,,
+C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v,1567488325,verilog,,C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v,,i2c_slave,,,,,,,,
+C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v,1569008598,verilog,,C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v,,QuadratureDecoder,,,,,,,,
+C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v,1569008816,verilog,,C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v,,i2c_quad_decode,,,,,,,,
