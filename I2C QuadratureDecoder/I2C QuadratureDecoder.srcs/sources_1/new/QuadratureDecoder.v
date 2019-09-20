@@ -37,9 +37,9 @@ module QuadratureDecoder(
 parameter max_count = 30; // Number of ticks on the encoder wheel in one revolution
     
 reg [2:0] quadA_delayed = 0, quadB_delayed = 0;
-reg index_dly;
-reg direction;
-reg dirError;
+reg index_dly = 1'b0;
+reg direction = 1'b0;
+reg dirError = 1'b0;
 
 wire Ap, Bp, fQuad, deJ, deK, dirReset, up, down;//, idx;
 assign Ap = quadA_delayed[0] ^ quadA;
@@ -53,24 +53,22 @@ assign dirReset = (quadA_delayed[1] & quadA_delayed[2]) | (quadB_delayed[1] & qu
 
 always @(posedge clk or posedge XRESET) 
 begin
-    if (XRESET) index_dly <= 0;
+    if (XRESET) index_dly = 1'b0;
     else begin
-      quadA_delayed[0] <= quadA;
-      quadB_delayed[0] <= quadB;
-      index_dly <= index;
+      quadA_delayed[0] = quadA;
+      quadB_delayed[0] = quadB;
+      index_dly = index;
     end
 end
 
 always @(deJ or deK or XRESET)
 begin
-    if (XRESET) begin
-        dirError <= 0;
-        end
+    if (XRESET) dirError = 1'b0;
     else begin    
       case ({deJ, deK})
           2'b0_1 : dirError <= 1'b0;
           2'b1_0 : dirError <= 1'b1;
-          2'b1_1 : dirError <= !dirError;
+          2'b1_1 : dirError = !dirError;
           2'b0_0 : ;
       endcase
     end

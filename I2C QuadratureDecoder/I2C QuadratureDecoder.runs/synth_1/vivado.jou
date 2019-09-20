@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Sep 20 15:58:09 2019
+# Process ID: 17888
+# Current directory: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1
+# Command line: vivado.exe -log i2c_quad_decode.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source i2c_quad_decode.tcl
+# Log file: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/i2c_quad_decode.vds
+# Journal file: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source i2c_quad_decode.tcl -notrace
