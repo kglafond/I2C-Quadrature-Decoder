@@ -1,0 +1,15 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = 1e
+                1002: Checking with memory contents...ERROR:DATA MISMATCH h1e h00
+                1452: Data Read = 1c
+                1452: Checking with memory contents...ERROR:DATA MISMATCH h1c h00
+                1902: Data Read = 1e
+                1902: Checking with memory contents...ERROR:DATA MISMATCH h1e h0d
+                2352: Data Read = 1c
+                2352: Checking with memory contents...ERROR:DATA MISMATCH h1c h04

@@ -51,6 +51,7 @@ assign up = fQuad & direction;
 assign down = fQuad & !direction;
 assign dirReset = (quadA_delayed[1] & quadA_delayed[2]) | (quadB_delayed[1] & quadB_delayed[2]);
 
+//always @(posedge clk)
 always @(posedge clk or posedge XRESET) 
 begin
     if (XRESET) index_dly = 1'b0;
@@ -61,6 +62,7 @@ begin
     end
 end
 
+//always @(posedge clk)
 always @(deJ or deK or XRESET)
 begin
     if (XRESET) dirError = 1'b0;
@@ -74,6 +76,7 @@ begin
     end
 end
 
+//always @(posedge clk)
 always @(posedge fQuad or posedge XRESET)
 begin    
   if (XRESET)
@@ -98,6 +101,7 @@ begin
     end
 end
 
+//always @(posedge clk)
 always @(posedge dirReset or posedge clk or posedge XRESET)
 begin
     if (XRESET) begin 

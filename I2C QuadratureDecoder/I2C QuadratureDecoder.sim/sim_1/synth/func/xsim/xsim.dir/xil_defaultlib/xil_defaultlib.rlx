@@ -1,0 +1,7 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim/i2c_peri_tb_func_synth.v,1569059568,verilog,,C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v,,QuadratureDecoder;QuadratureDecoder_0;QuadratureDecoder_1;QuadratureDecoder_2;glbl;i2c_quad_decode;i2c_slave,,,,,,,,
+C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v,1569010348,verilog,,C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v,,i2c_mstr,,,,,,,,
+C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v,1569010348,verilog,,,,i2c_peri_tb,,,,,,,,

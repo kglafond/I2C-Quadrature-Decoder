@@ -152,10 +152,12 @@ module i2c_mstr(XRESET,
       $display($time,": Reading I2C Register");		// use current address pointer, no stop until the last read
       start_proc;						
       read_i2c_nostop(rd_a_addr);
-      //read_i2c_ack;
-      //read_i2c_repeat;
-      //read_i2c_ack;
-      //read_i2c_repeat;
+      read_i2c_ack;
+      read_i2c_repeat;
+      read_i2c_ack;
+      read_i2c_repeat;
+      read_i2c_ack;
+      read_i2c_repeat;
       stop_proc;
     
 //      // burst write (sequential write)
@@ -247,7 +249,7 @@ module i2c_mstr(XRESET,
          XRESET    <= #1 1'b1;
          sda_reg   <= #1 1'b1;
          scl_reg   <= #1 1'b1;
-         scl_enable <= #1 1'b0;	
+         scl_enable <= #1 1'b1;	
 		 data_read  = 1'b0;
 		 data_read_nostop = 1'b0;
          #reset_delay;

@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"i2c_peri_tb_func_synth.v" \
+"../../../../../I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" \
+"../../../../../I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" \
+
+# Do not sort compile order
+nosort

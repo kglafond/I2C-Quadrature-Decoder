@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep 20 15:58:09 2019
-# Process ID: 17888
+# Start of session at: Sat Sep 21 02:37:08 2019
+# Process ID: 10484
 # Current directory: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1
 # Command line: vivado.exe -log i2c_quad_decode.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source i2c_quad_decode.tcl
 # Log file: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/i2c_quad_decode.vds
@@ -16,15 +16,15 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5828 
+INFO: Helper process launched with PID 21884 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 701.656 ; gain = 178.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 699.531 ; gain = 177.480
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'i2c_quad_decode' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:23]
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter num_data bound to: 8 - type: integer 
-WARNING: [Synth 8-2898] ignoring pullup [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:78]
-WARNING: [Synth 8-2898] ignoring pullup [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'PULLUP' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:69747]
+INFO: [Synth 8-6155] done synthesizing module 'PULLUP' (1#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:69747]
 INFO: [Synth 8-6157] synthesizing module 'i2c_slave' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:63]
 	Parameter I2C_SLAVE_ADDR bound to: 7'b1010010 
 	Parameter idle bound to: 5'b00000 
@@ -45,13 +45,13 @@ INFO: [Synth 8-6157] synthesizing module 'i2c_slave' [C:/Repos/External test Rep
 	Parameter data2 bound to: 5'b01111 
 	Parameter data1 bound to: 5'b10000 
 	Parameter data0 bound to: 5'b10001 
-INFO: [Synth 8-6155] done synthesizing module 'i2c_slave' (1#1) [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_slave' (2#1) [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:63]
 INFO: [Synth 8-6157] synthesizing module 'QuadratureDecoder' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v:27]
 	Parameter max_count bound to: 30 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'QuadratureDecoder' (2#1) [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v:27]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_quad_decode' (3#1) [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'QuadratureDecoder' (3#1) [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_quad_decode' (4#1) [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 766.223 ; gain = 242.672
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 763.836 ; gain = 241.785
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -64,10 +64,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 766.223 ; gain = 242.672
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 763.836 ; gain = 241.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 766.223 ; gain = 242.672
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 763.836 ; gain = 241.785
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -79,30 +79,40 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/i2c_quad_decode_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 887.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 885.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 887.793 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 885.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'dirError_reg' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'sda_f_reg' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:122]
+WARNING: [Synth 8-327] inferring latch for variable 'dirError_reg' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[8]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[7]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[6]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[5]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[4]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[3]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[2]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[1]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg[0]' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -119,20 +129,21 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 9     
 	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 13    
+	   2 Input      1 Bit         XORs := 12    
 +---Registers : 
-	                8 Bit    Registers := 9     
+	                8 Bit    Registers := 8     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 19    
+	                1 Bit    Registers := 18    
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 34    
+	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 10    
 	   2 Input      2 Bit        Muxes := 1     
 	  19 Input      1 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 32    
-	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 39    
+	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
 	   5 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
@@ -149,19 +160,18 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 12    
+	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 20    
 Module i2c_slave 
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 6     
 	   2 Input      4 Bit        Muxes := 2     
@@ -169,8 +179,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
 	  19 Input      1 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 4     
-	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
 Module QuadratureDecoder 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -202,96 +212,12 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][5]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][4]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][3]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][2]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[7][1]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][5]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][4]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][3]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][2]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[6][1]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][5]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][4]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][3]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][2]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[5][1]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][5]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][4]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][3]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][2]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem_reg[4][1]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-INFO: [Synth 8-3886] merging instance 'i2c_addr_reg[4]' (FDCE) to 'i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i2c_addr_reg[6]' (FDCE) to 'i2c_addr_reg[7]'
 INFO: [Synth 8-3886] merging instance 'i2c_addr_reg[5]' (FDCE) to 'i2c_addr_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i2c_addr_reg[7] )
+INFO: [Synth 8-3886] merging instance 'i2c_addr_reg[7]' (FDCE) to 'i2c_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i2c_addr_reg[4]' (FDCE) to 'i2c_addr_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i2c_addr_reg[6] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -303,13 +229,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,7 +247,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 887.793 ; gain = 364.242
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 885.902 ; gain = 363.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -345,65 +271,20 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[7]__0[0] with 1st driver pin 'mem_reg[7][0]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[7]__0[0] with 2nd driver pin 'mem_reg[7][0]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[6]__0[0] with 1st driver pin 'mem_reg[6][0]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[6]__0[0] with 2nd driver pin 'mem_reg[6][0]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[5]__0[0] with 1st driver pin 'mem_reg[5][0]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[5]__0[0] with 2nd driver pin 'mem_reg[5][0]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[4]__0[0] with 1st driver pin 'mem_reg[4][0]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[4]__0[0] with 2nd driver pin 'mem_reg[4][0]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[7] with 1st driver pin 'mem_reg[3][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[7] with 2nd driver pin 'mem_reg[3][7]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[6] with 1st driver pin 'mem_reg[3][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[6] with 2nd driver pin 'mem_reg[3][6]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[5] with 1st driver pin 'mem_reg[3][5]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[5] with 2nd driver pin 'mem_reg[3][5]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[4] with 1st driver pin 'mem_reg[3][4]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[4] with 2nd driver pin 'mem_reg[3][4]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[3] with 1st driver pin 'mem_reg[3][3]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[3] with 2nd driver pin 'mem_reg[3][3]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[2] with 1st driver pin 'mem_reg[3][2]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[2] with 2nd driver pin 'mem_reg[3][2]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[1] with 1st driver pin 'mem_reg[3][1]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[1] with 2nd driver pin 'mem_reg[3][1]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[0] with 1st driver pin 'mem_reg[3][0]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[3]__0[0] with 2nd driver pin 'mem_reg[3][0]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[7] with 1st driver pin 'mem_reg[2][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[7] with 2nd driver pin 'mem_reg[2][7]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[6] with 1st driver pin 'mem_reg[2][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[6] with 2nd driver pin 'mem_reg[2][6]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[5] with 1st driver pin 'mem_reg[2][5]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[5] with 2nd driver pin 'mem_reg[2][5]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[4] with 1st driver pin 'mem_reg[2][4]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[4] with 2nd driver pin 'mem_reg[2][4]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[3] with 1st driver pin 'mem_reg[2][3]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[3] with 2nd driver pin 'mem_reg[2][3]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[2] with 1st driver pin 'mem_reg[2][2]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[2] with 2nd driver pin 'mem_reg[2][2]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[1] with 1st driver pin 'mem_reg[2][1]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[1] with 2nd driver pin 'mem_reg[2][1]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[0] with 1st driver pin 'mem_reg[2][0]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[2]__0[0] with 2nd driver pin 'mem_reg[2][0]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[1]__0[7] with 1st driver pin 'mem_reg[1][7]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[1]__0[7] with 2nd driver pin 'mem_reg[1][7]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[1]__0[6] with 1st driver pin 'mem_reg[1][6]__0/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:87]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin mem[1]__0[6] with 2nd driver pin 'mem_reg[1][6]/Q' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:158]
-INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       36|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -415,25 +296,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -446,61 +327,65 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     2|
-|2     |LUT1  |     2|
-|3     |LUT2  |    23|
-|4     |LUT3  |    20|
-|5     |LUT4  |    25|
-|6     |LUT5  |    33|
-|7     |LUT6  |    87|
-|8     |FDCE  |   119|
-|9     |FDPE  |     6|
-|10    |FDRE  |    68|
-|11    |LD    |     4|
-|12    |LDC   |     5|
-|13    |IBUF  |    15|
-|14    |IOBUF |     1|
-+------+------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |LUT1   |     2|
+|3     |LUT2   |    29|
+|4     |LUT3   |    54|
+|5     |LUT4   |    15|
+|6     |LUT5   |    47|
+|7     |LUT6   |    86|
+|8     |MUXF7  |     6|
+|9     |PULLUP |     2|
+|10    |FDCE   |    54|
+|11    |FDPE   |     4|
+|12    |FDRE   |    48|
+|13    |FDSE   |     1|
+|14    |LD     |    12|
+|15    |LDC    |    69|
+|16    |IBUF   |    15|
+|17    |IOBUF  |     1|
++------+-------+------+
 
 Report Instance Areas: 
 +------+---------+--------------------+------+
 |      |Instance |Module              |Cells |
 +------+---------+--------------------+------+
-|1     |top      |                    |   410|
-|2     |  i2c    |i2c_slave           |   109|
-|3     |  q1     |QuadratureDecoder   |    47|
-|4     |  q2     |QuadratureDecoder_0 |    46|
-|5     |  q3     |QuadratureDecoder_1 |    46|
-|6     |  q4     |QuadratureDecoder_2 |    46|
+|1     |top      |                    |   448|
+|2     |  i2c    |i2c_slave           |   157|
+|3     |  q1     |QuadratureDecoder   |    46|
+|4     |  q2     |QuadratureDecoder_0 |    45|
+|5     |  q3     |QuadratureDecoder_1 |    45|
+|6     |  q4     |QuadratureDecoder_2 |    45|
 +------+---------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 156 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 892.578 ; gain = 247.457
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 892.578 ; gain = 369.027
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 889.121 ; gain = 245.004
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 889.121 ; gain = 367.070
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 906.230 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 904.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10 instances were transformed.
+  A total of 82 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
-  LD => LDCE: 4 instances
-  LDC => LDCE: 5 instances
+  LD => LDCE: 12 instances
+  LDC => LDCE: 68 instances
+  LDC => LDCE (inverted pins: G): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 3 Warnings, 128 Critical Warnings and 0 Errors encountered.
+24 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 906.230 ; gain = 613.805
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 906.230 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 904.125 ; gain = 607.301
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 904.125 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/i2c_quad_decode.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file i2c_quad_decode_utilization_synth.rpt -pb i2c_quad_decode_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 20 15:58:44 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 21 02:37:58 2019...

@@ -115,11 +115,14 @@ wire stop_async_rst = start | XRESET;                              // same for s
  prevents false start/re-starts from syncronized 
  falling edges (sda and scl)
 ******************************************/
-reg sda_f;                     
+reg sda_f = 1'b0;                     
 wire #1 sda_clk;
-xor u1 (sda_clk, sda_f, sda_in);                                   // generate a narrow pulse based on the delay between sda_in and sda_f (detect edges in sda level)
 
-always @ (posedge sda_clk or posedge start_async_rst or posedge XRESET)		       // use the narrow clock pulse to delay sda_in through a register
+//xor u1 (sda_clk, sda_f, sda_in);                                   // generate a narrow pulse based on the delay between sda_in and sda_f (detect edges in sda level)
+assign sda_clk = sda_f ^ sda_in;
+
+always @ (*)
+//always @ (sda_clk or start_async_rst or XRESET)	   // use the narrow clock pulse to delay sda_in through a register NO EDGE ON XRESET
 begin
     if (XRESET) sda_f <= 1'b0; 
 	else if (start_async_rst)
@@ -160,13 +163,13 @@ end
 FSM check the addr byte and track rw opp
 *****************************************/
 
-always @(posedge scl_in or posedge XRESET)
+always @(posedge scl_in)
 begin
 	if (XRESET) 							
 	  begin
 		sm_state <=  idle;                                          // reset fsm to idle
 		r_w      <=  1'b1;				                            // initial value for read
-    vld_plse <=  1'b0;                                     
+        vld_plse <=  1'b0;                                     
 	  end                                                                   
 	else                                                                    
 	 	case (sm_state)                                               
@@ -253,7 +256,7 @@ end
    - Slave generate ACKOUT during write cycle                                      
 ********************************************/                                  
 	                                                                       
-always @(negedge scl_in or posedge XRESET)                        //  (ack_out is high to send out ACK)
+always @(negedge scl_in)                        //  (ack_out is high to send out ACK)
 begin	 					                                      // data should be ready on SDA line when SCL is high
 	if (XRESET)                                                            
 	   ack_out <= #1 0;                                                       
@@ -273,7 +276,7 @@ end
 /********************************************                                  
  Enable starting from ACK state                                                
 ********************************************/                                                                               
-always @(negedge scl_in or posedge XRESET)                                        
+always @(negedge scl_in)                                        
 begin                                                                     
 	if (XRESET)                                                            
 		sda_en <= 0;                                                   
@@ -297,7 +300,7 @@ assign scl_oe = (sm_state == ack) & (~ready);					 // if scl_oe = 1, then scl is
 /*******************************
  Shift operation for READ data
 *******************************/
-always @(negedge scl_in or posedge XRESET)
+always @(negedge scl_in)
 begin
 	if (XRESET)                                                  // Clear shift register on RESET
 		shift <= #1 8'b0;
@@ -318,7 +321,7 @@ end
 /********************************************
  data output register
 ********************************************/
-always @ (posedge scl_in or posedge XRESET)				
+always @ (posedge scl_in)				
 begin
 	if (XRESET) 										         // Clear internal regsiter on RESET
 		data_int <=  #1 8'h0;

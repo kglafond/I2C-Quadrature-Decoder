@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim/i2c_peri_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder_0
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder_1
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder_2
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb

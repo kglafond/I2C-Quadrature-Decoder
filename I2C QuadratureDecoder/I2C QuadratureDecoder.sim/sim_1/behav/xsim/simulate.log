@@ -5,8 +5,11 @@ Time resolution is 1 ps
                    0: Initializing Test Bench
 
                  150: Reading I2C Register
-                1002: Data Read = ff
-                1002: Checking with memory contents...ERROR:DATA MISMATCH hff h01
-                1162: Writing I2C Register to read from 01
-
-                2006: Reading I2C Register starting at 01
+                1002: Data Read = 1e
+                1002: Checking with memory contents...ERROR:DATA MISMATCH h1e h00
+                1452: Data Read = 1e
+                1452: Checking with memory contents...ERROR:DATA MISMATCH h1e h00
+                1902: Data Read = 1e
+                1902: Checking with memory contents...ERROR:DATA MISMATCH h1e h0d
+                2352: Data Read = 1e
+                2352: Checking with memory contents...ERROR:DATA MISMATCH h1e h04

@@ -75,8 +75,8 @@ wire [7:0] count3;
 wire quadA4, quadB4, index4, calib4;
 wire [7:0] count4; 
 
-pullup p1(sda);
-pullup p2(scl);
+PULLUP p1(.O(sda));
+PULLUP p2(.O(scl));
 assign rst = XRESET;
     
 i2c_slave i2c   								 
@@ -106,7 +106,8 @@ initial
   end
   
 // Update memory when required
-always @ (posedge scl or posedge rst)
+//always @ (posedge scl or posedge rst)
+always @ (*)
   begin
     if (rst)
         for (i=0; i<num_data; i=i+1) mem[i] = 0;
@@ -120,7 +121,9 @@ always @ (posedge scl or posedge rst)
         mem[5] = calib2;
         mem[6] = calib3;
         mem[7] = calib4;
-    end
+       end
+    else if (!r_w & (byte_cnt > 1))
+     mem[i2c_addr] = #1 data_out;
   end
 
 // Indicate that an ACK is detected
@@ -150,13 +153,7 @@ always @ (posedge scl or posedge rst)
            i2c_addr <= #1 (i2c_addr + 1 < num_data) ? i2c_addr + 1 : num_data;
         else if (stop | start)
            i2c_addr <= (data_out < num_data) ? data_out : num_data;
-  end	
-  
-// Write data to memory at location memory i2c_addr (not needed in my implementation)	  
-always @ (posedge sclk)
-   if (!r_w & (byte_cnt > 1))
-     mem[i2c_addr] <= #1 data_out;
-     
+  end	     
 
 // -----------------------------------------------------------     
 // DECODERS

@@ -173,7 +173,8 @@ begin // Rev
 end
 
 // TESTING CODE
-always @(posedge u1.data_vld)
+//always @(posedge u1.data_vld)
+always @(posedge u1.i2c.data_vld)
     i2c_addr = i2c_addr+1;
     
 // Compare the read data against the mem file    
