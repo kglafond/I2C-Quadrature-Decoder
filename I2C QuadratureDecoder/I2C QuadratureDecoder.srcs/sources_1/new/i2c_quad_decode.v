@@ -19,9 +19,9 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+`default_nettype none
 
-module i2c_quad_decode(XRESET,
-                       sclk,
+module i2c_quad_decode(sclk,
                        sda,
                        scl,
                        quadA1, quadB1, index1,
@@ -32,10 +32,9 @@ module i2c_quad_decode(XRESET,
     
 //---------------------------------------------------------------------
 // port list
-   input XRESET;
-   input sclk;
-   inout sda;
-   inout scl;
+   input wire sclk;
+   inout wire sda;
+   inout wire scl;
    input quadA1, quadB1, index1;
    input quadA2, quadB2, index2;
    input quadA3, quadB3, index3;
@@ -50,47 +49,57 @@ parameter    num_data   = 8;  // Number of data items in the memory
 //-------------------------- -------------------------------------------
 // regs and interconnect wires
 
-wire sda;
-wire scl;
+wire start, stop;
 
-wire rst, start, stop;
-
-reg ready;
+reg ready = 1'b0;
 
 reg  [7:0] data_in;
 wire [7:0] data_out;
 wire r_w, data_vld; 
 wire sda_oe, scl_oe;
 
-reg [data_width-1:0] byte_cnt;             // num bytes sent per transaction (caps at FF)
-reg [data_width-1:0] i2c_addr;		       // data item addr 
+reg read = 0;
+reg [data_width-1:0] byte_cnt = 0;             // num bytes sent per transaction (caps at FF)
+reg [data_width-1:0] i2c_addr = 0;		       // data item addr 
 reg [data_width-1:0] mem [num_data:0];     // data item storage (top/extra item for exceeding num_items)
 
 wire quadA1, quadB1, index1, calib1;
 wire [7:0] count1;
+wire [2:0] icount1;
 wire quadA2, quadB2, index2, calib2;
-wire [7:0] count2;    
+wire [7:0] count2;
+wire [2:0] icount2;    
 wire quadA3, quadB3, index3, calib3;
-wire [7:0] count3;    
+wire [7:0] count3;
+wire [2:0] icount3;    
 wire quadA4, quadB4, index4, calib4;
-wire [7:0] count4; 
+wire [7:0] count4;
+wire [2:0] icount4; 
 
 PULLUP p1(.O(sda));
 PULLUP p2(.O(scl));
-assign rst = XRESET;
+
+reg [2:0] sda_sync  = 3'h0;
+reg [2:0] scl_sync  = 3'h0;
+always @ (posedge sclk)
+begin
+    sda_sync[2] = sda;
+    scl_sync[2] = scl; 
+    //sda_sync = {sda_sync[1:0], sda};  This is bad = breaks sim
+    //sda_sync = {scl_sync[1:0], scl};
+end
     
 i2c_slave i2c   								 
-	(.XRESET    (rst), 
-     .ready     (ready),
+	(.ready     (ready),
 	 .start		(start),
 	 .stop		(stop),
 	 .data_in	(mem[i2c_addr]), 
 	 .data_out  (data_out), 
 	 .r_w		(r_w), 
 	 .data_vld  (data_vld), 
-	 .scl_in	(scl), 
+	 .scl_in	(scl_sync[2]), 
      .scl_oe 	(scl_oe),
-	 .sda_in	(sda), 
+	 .sda_in	(sda_sync[2]), 
 	 .sda_oe	(sda_oe)
 	 ) ;
 
@@ -100,18 +109,15 @@ assign scl = scl_oe ? 1'b0 : 1'bz;
 integer i;
 initial 
   begin
-	#0 ready = 1'b1;
 	data_in = 8'h0;
 	mem[num_data] = 1'b0;
   end
   
 // Update memory when required
-//always @ (posedge scl or posedge rst)
-always @ (*)
+always @ (posedge scl_sync[2])
   begin
-    if (rst)
-        for (i=0; i<num_data; i=i+1) mem[i] = 0;
-    else if (start) begin
+    ready = 1'b1;
+    if (start) begin
         // snapshot wheel counts
         mem[0] = count1;
         mem[1] = count2;
@@ -128,75 +134,74 @@ always @ (*)
 
 // Indicate that an ACK is detected
 // every 9 clocks there will be a valid data / address
-always @ (posedge scl or posedge rst)
+always @ (posedge scl_sync[2])
   begin
-     if (rst) 
-        byte_cnt <= #1 0;
-     else
-        if (byte_cnt == 4'hF & !start)
-           byte_cnt <= #1 byte_cnt;
-        else if (data_vld)
-           byte_cnt <=  #1 byte_cnt + 1;
-        else if (start)
-           byte_cnt <= #1 0;
+    if (byte_cnt == 4'hF & !start)
+       byte_cnt <= #1 byte_cnt;
+    else if (data_vld)
+       byte_cnt <=  #1 byte_cnt + 1;
+    else if (start)
+       byte_cnt <= #1 0;
   end
 
 // Set the address to be read or written to i2c_addr
-always @ (posedge scl or posedge rst)
+always @ (posedge scl_sync[2])
   begin
-     if (rst) 
-        i2c_addr <= #1 4'h0;
-     else
-        if ((byte_cnt == 1) & !r_w & data_vld)                              // if byte_count = 1 it's a potential random read or write address (looking for writes here)
-           i2c_addr <= #1 (data_out < num_data) ? data_out : num_data;      // put received data (address) into memory
-        else if (data_vld)
-           i2c_addr <= #1 (i2c_addr + 1 < num_data) ? i2c_addr + 1 : num_data;
-        else if (stop | start)
-           i2c_addr <= (data_out < num_data) ? data_out : num_data;
+    if ((byte_cnt == 1) & !r_w & data_vld)                              // if byte_count = 1 it's a potential random read or write address (looking for writes here)
+       i2c_addr <= #1 (data_out < num_data) ? data_out : num_data;      // put received data (address) into memory
+    else if (data_vld)
+       i2c_addr <= #1 (i2c_addr + 1 < num_data) ? i2c_addr + 1 : num_data;
+    else if (stop | start)
+       i2c_addr <= (data_out < num_data) ? data_out : num_data;
   end	     
 
 // -----------------------------------------------------------     
 // DECODERS
 // -----------------------------------------------------------
 QuadratureDecoder q1(
-    .XRESET (rst),
-    .clk    (sclk), 
-    .quadA  (quadA1), 
-    .quadB  (quadB1),
-    .index  (index1), 
-    .count  (count1),
-    .calibrated (calib1)
+    .i_clk    (sclk), 
+    .i_quadA  (quadA1), 
+    .i_quadB  (quadB1),
+    .i_index  (index1),
+    .i_read   (read), 
+    .o_count  (count1),
+    .o_icount (icount1),
+    .o_calibrated (calib1)
     );
 
 QuadratureDecoder q2(
-    .XRESET (rst),
-    .clk    (sclk), 
-    .quadA  (quadA2), 
-    .quadB  (quadB2),
-    .index  (index2), 
-    .count  (count2),
-    .calibrated (calib2)
+    .i_clk    (sclk), 
+    .i_quadA  (quadA2), 
+    .i_quadB  (quadB2),
+    .i_index  (index2),
+    .i_read   (read), 
+    .o_count  (count2),
+    .o_icount (icount2),
+    .o_calibrated (calib2)
     );
 
 QuadratureDecoder q3(
-    .XRESET (rst),
-    .clk    (sclk), 
-    .quadA  (quadA3), 
-    .quadB  (quadB3),
-    .index  (index3), 
-    .count  (count3),
-    .calibrated (calib3)
+    .i_clk    (sclk), 
+    .i_quadA  (quadA3), 
+    .i_quadB  (quadB3),
+    .i_index  (index3),
+    .i_read   (read), 
+    .o_count  (count3),
+    .o_icount (icount3),
+    .o_calibrated (calib3)
     );
 
 QuadratureDecoder q4(
-    .XRESET (rst),
-    .clk    (sclk), 
-    .quadA  (quadA4), 
-    .quadB  (quadB4),
-    .index  (index4), 
-    .count  (count4),
-    .calibrated (calib4)
-    );        
+    .i_clk    (sclk), 
+    .i_quadA  (quadA4), 
+    .i_quadB  (quadB4),
+    .i_index  (index4),
+    .i_read   (read), 
+    .o_count  (count4),
+    .o_icount (icount4),
+    .o_calibrated (calib4)
+    );
+    
 endmodule
 
 //-------------------------------EOF------------------------------------------

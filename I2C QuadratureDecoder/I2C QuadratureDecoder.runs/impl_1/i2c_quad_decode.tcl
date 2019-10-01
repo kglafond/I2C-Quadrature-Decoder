@@ -60,96 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
-start_step init_design
-set ACTIVE_STEP init_design
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
+  create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
-  create_project -in_memory -part xc7a35tcpg236-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  open_checkpoint i2c_quad_decode_routed.dcp
   set_property webtalk.parent_dir {C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.cache/wt} [current_project]
-  set_property parent.project_path {C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.xpr} [current_project]
-  set_property ip_output_repo {{C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder/I2C QuadratureDecoder.cache/ip}} [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/i2c_quad_decode.dcp}}
-  read_xdc {{C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc}}
-  link_design -top i2c_quad_decode -part xc7a35tcpg236-1
-  close_msg_db -file init_design.pb
+  catch { write_mem_info -force i2c_quad_decode.mmi }
+  write_bitstream -force i2c_quad_decode.bit -bin_file
+  catch {write_debug_probes -quiet -force i2c_quad_decode}
+  catch {file copy -force i2c_quad_decode.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force i2c_quad_decode_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file i2c_quad_decode_drc_opted.rpt -pb i2c_quad_decode_drc_opted.pb -rpx i2c_quad_decode_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design 
-  write_checkpoint -force i2c_quad_decode_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file i2c_quad_decode_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file i2c_quad_decode_utilization_placed.rpt -pb i2c_quad_decode_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file i2c_quad_decode_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force i2c_quad_decode_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file i2c_quad_decode_drc_routed.rpt -pb i2c_quad_decode_drc_routed.pb -rpx i2c_quad_decode_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file i2c_quad_decode_methodology_drc_routed.rpt -pb i2c_quad_decode_methodology_drc_routed.pb -rpx i2c_quad_decode_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file i2c_quad_decode_power_routed.rpt -pb i2c_quad_decode_power_summary_routed.pb -rpx i2c_quad_decode_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file i2c_quad_decode_route_status.rpt -pb i2c_quad_decode_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file i2c_quad_decode_timing_summary_routed.rpt -pb i2c_quad_decode_timing_summary_routed.pb -rpx i2c_quad_decode_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file i2c_quad_decode_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file i2c_quad_decode_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file i2c_quad_decode_bus_skew_routed.rpt -pb i2c_quad_decode_bus_skew_routed.pb -rpx i2c_quad_decode_bus_skew_routed.rpx"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force i2c_quad_decode_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

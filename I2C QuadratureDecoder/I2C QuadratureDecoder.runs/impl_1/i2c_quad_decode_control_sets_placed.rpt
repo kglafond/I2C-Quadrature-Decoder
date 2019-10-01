@@ -1,0 +1,100 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Sep 30 23:11:42 2019
+| Host         : Urithiru running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file i2c_quad_decode_control_sets_placed.rpt
+| Design       : i2c_quad_decode
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    22 |
+|    Minimum number of control sets                        |    22 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    26 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    22 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    16 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              65 |           25 |
+| No           | No                    | Yes                    |               2 |            2 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              59 |           17 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              72 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+------------------------+-------------------+------------------+----------------+
+|   Clock Signal   |      Enable Signal     |  Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------+------------------------+-------------------+------------------+----------------+
+|  sda_sync[2]     |                        | i2c/start         |                1 |              1 |
+| ~sda_sync[2]     |                        | i2c/start_i_1_n_0 |                1 |              1 |
+| ~p_0_in1_in_BUFG |                        |                   |                1 |              3 |
+|  p_0_in1_in_BUFG | i2c/vld_plse_reg_1[0]  |                   |                2 |              4 |
+| ~p_0_in1_in_BUFG | i2c/p_0_in[6]          |                   |                2 |              7 |
+|  p_0_in1_in_BUFG |                        |                   |                4 |              8 |
+|  p_0_in1_in_BUFG | i2c/i2c_addr_reg[1]_0  | i2c/start         |                4 |              8 |
+|  p_0_in1_in_BUFG | i2c/i2c_addr_reg[0]    | i2c/start         |                3 |              8 |
+|  p_0_in1_in_BUFG | i2c/i2c_addr_reg[1]_2  | i2c/start         |                2 |              8 |
+|  p_0_in1_in_BUFG | i2c/data_int0          |                   |                1 |              8 |
+|  p_0_in1_in_BUFG | i2c/i2c_addr_reg[1]_1  | i2c/start         |                2 |              8 |
+|  p_0_in1_in_BUFG | i2c/E[0]               |                   |                3 |              8 |
+|  p_0_in1_in_BUFG | i2c/i2c_addr_reg[1][0] |                   |                1 |              8 |
+|  p_0_in1_in_BUFG | i2c/start_reg_1[0]     |                   |                5 |              8 |
+|  p_0_in1_in_BUFG | i2c/start_reg_0[0]     |                   |                2 |              8 |
+|  p_0_in1_in_BUFG | i2c/start_reg_2[0]     |                   |                1 |              8 |
+|  p_0_in1_in_BUFG | i2c/vld_plse_reg_0[0]  | i2c/SR[0]         |                2 |              8 |
+|  sclk_IBUF_BUFG  | q1/noop_reg_inv_n_0    | q1/index_delay[2] |                3 |              8 |
+|  sclk_IBUF_BUFG  | q2/noop_reg_inv_n_0    | q2/index_delay[2] |                4 |              8 |
+|  sclk_IBUF_BUFG  | q3/noop_reg_inv_n_0    | q3/index_delay[2] |                2 |              8 |
+|  sclk_IBUF_BUFG  | q4/noop_reg_inv_n_0    | q4/index_delay[2] |                3 |              8 |
+|  sclk_IBUF_BUFG  |                        |                   |               20 |             54 |
++------------------+------------------------+-------------------+------------------+----------------+
+
+

@@ -2,42 +2,122 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep 20 13:16:55 2019
-# Process ID: 7568
+# Start of session at: Sat Sep 28 15:23:16 2019
+# Process ID: 7932
 # Current directory: C:/Repos/External test Repo/I2C QuadratureDecoder
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19744 C:\Repos\External test Repo\I2C QuadratureDecoder\I2C QuadratureDecoder.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11276 C:\Repos\External test Repo\I2C QuadratureDecoder\I2C QuadratureDecoder.xpr
 # Log file: C:/Repos/External test Repo/I2C QuadratureDecoder/vivado.log
 # Journal file: C:/Repos/External test Repo/I2C QuadratureDecoder\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.xpr}
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 4000 ns
+relaunch_sim
+run 4000 ns
+relaunch_sim
+run 4000 ns
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+run 4000 ns
+run 4000 ns
+relaunch_sim
+run 4000 ns
+run 4000 ns
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+run 4000 ns
+run 4000 ns
+run all
+relaunch_sim
+run all
+close_sim
 reset_run synth_1
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
+launch_simulation
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+run 4000 ns
+run 4000 ns
+close_sim
 reset_run synth_1
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
+open_run synth_1 -name synth_1
+reset_simulation -simset sim_1 -mode post-synthesis -type functional
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+run 4000 ns
+run 4000 ns
+run 4000 ns
+close_sim
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+run 4000 ns
+run 4000 ns
+close_sim
 reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+open_run impl_1
+close_design
+open_run impl_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

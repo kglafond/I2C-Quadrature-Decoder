@@ -23,92 +23,72 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+`default_nettype none
 
 module QuadratureDecoder(
-    input XRESET,
-    input clk, 
-    input quadA, 
-    input quadB,
-    input index, 
-    output reg [7:0] count,
-    output reg calibrated
+    input wire i_clk,   // Pre-synched
+    input wire i_quadA, // Raw signal from pin
+    input wire i_quadB, // Raw signal from pin
+    input wire i_index, // Raw signal from pin
+    input wire i_read,  // Pre-synched
+    output reg [7:0] o_count,
+    output reg [2:0] o_icount,
+    output reg o_calibrated
     );
     
-parameter max_count = 30; // Number of ticks on the encoder wheel in one revolution
+parameter max_count = 8'd30; // Number of ticks on the encoder wheel in one revolution
+parameter up = 1'b1; // Up adds to counter, !Up subtracts from counter
     
-reg [2:0] quadA_delayed = 0, quadB_delayed = 0;
-reg index_dly = 1'b0;
-reg direction = 1'b0;
-reg dirError = 1'b0;
+reg [2:0] quadA_delay = 3'b000, quadB_delay = 3'b000, index_delay = 3'b000;
+reg direction = up;
+reg noop = 1'b0;
+reg [1:0] last_state = 2'b00;
 
-wire Ap, Bp, fQuad, deJ, deK, dirReset, up, down;//, idx;
-assign Ap = quadA_delayed[0] ^ quadA;
-assign Bp = quadB_delayed[0] ^ quadB;
-assign fQuad = Ap | Bp; // was &
-assign deJ = (quadA ^ quadB) & Ap;
-assign deK = (quadA ^ quadB) & Bp;
-assign up = fQuad & direction;
-assign down = fQuad & !direction;
-assign dirReset = (quadA_delayed[1] & quadA_delayed[2]) | (quadB_delayed[1] & quadB_delayed[2]);
+initial o_count = 0;
+initial o_icount = 3'sd0;
+initial o_calibrated = 0;
 
-//always @(posedge clk)
-always @(posedge clk or posedge XRESET) 
+always @(posedge i_clk) 
 begin
-    if (XRESET) index_dly = 1'b0;
-    else begin
-      quadA_delayed[0] = quadA;
-      quadB_delayed[0] = quadB;
-      index_dly = index;
-    end
-end
-
-//always @(posedge clk)
-always @(deJ or deK or XRESET)
-begin
-    if (XRESET) dirError = 1'b0;
-    else begin    
-      case ({deJ, deK})
-          2'b0_1 : dirError <= 1'b0;
-          2'b1_0 : dirError <= 1'b1;
-          2'b1_1 : dirError = !dirError;
-          2'b0_0 : ;
-      endcase
-    end
-end
-
-//always @(posedge clk)
-always @(posedge fQuad or posedge XRESET)
-begin    
-  if (XRESET)
-    begin
-        count <= 0;
-        calibrated <= 0;
-    end
-  else
-    begin
-        quadA_delayed[2:1] <= {quadA_delayed[1], Ap};
-        quadB_delayed[2:1] <= {quadB_delayed[1], Bp};
-        if (index & index_dly)
-        begin 
-            count <= 0;
-            calibrated <= 1;
-        end
-        else 
-            if (direction) 
-                if (count >= max_count) count <= 0; else count <= count+1;
-            else 
-                if (count <= 0) count <= max_count; else count <= count-1;
-    end
-end
-
-//always @(posedge clk)
-always @(posedge dirReset or posedge clk or posedge XRESET)
-begin
-    if (XRESET) begin 
-        direction <= 0;
-      end
-    else begin direction <= dirReset ? !dirError : dirError;
-      end    
+  quadA_delay <= {quadA_delay[1:0], i_quadA};
+  quadB_delay <= {quadB_delay[1:0], i_quadB};
+  index_delay <= {index_delay[1:0], i_index};
+  
+  case ({last_state[1:0], quadA_delay[2], quadB_delay[2]})
+    4'b0001 , // +1
+    4'b1000 , // +1
+    4'b1110 , // +1
+    4'b0111 : // +1
+            begin 
+                direction <= up;
+                noop <= 1'b0;
+            end
+    4'b0010 , // -1
+    4'b0100 , // -1
+    4'b1101 , // -1
+    4'b1011 : // -1
+            begin
+                direction <= !up;
+                noop <= 1'b0;
+            end
+    default : noop <= 1'b1;  // No state change, or illegal state change
+  endcase
+  
+  // incorporate read (zero out o_icount somehow) r=1 id=0 / r=1 id=1 / r=0 id=1
+  if (i_read == 1) // Could miss the tick?
+        o_icount = index_delay[2] == 0 ? 0 : ((direction == up) ? 1 : -1); 
+  else if (index_delay[2] == 1 && o_calibrated)  // hit Index, zero tick counter and increment index counter
+        o_icount <= (direction == up) ? o_icount +1 : o_icount -1;
+  
+  if (index_delay[2] == 1) o_count <= 0;  
+  else if (!noop) // Count tick based on direction rotating
+        if (direction == up) 
+            o_count <= (o_count == max_count) ? 0 : o_count +1;
+        else
+            o_count <= (o_count == 0) ? max_count : o_count -1;    
+//      else noop <= 0; // No state case matched from above = do nothing
+  
+  last_state <= {quadA_delay[2], quadB_delay[2]};
 end
 
 endmodule

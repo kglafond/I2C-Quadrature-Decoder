@@ -55,7 +55,7 @@
 //-------------------------------------------------------------------------
 
 `timescale 1 ns /  100 ps
-
+`default_nettype none
 
 module i2c_mstr(XRESET, 
                 scl, 
@@ -70,10 +70,10 @@ module i2c_mstr(XRESET,
 
    output          XRESET;
    input [1:0]	   error;	
-   output          scl;
-   inout           sda;
-   input 	       ready;
-   input 		   scl_oe;
+   output wire         scl;
+   inout wire          sda;
+   input wire	       ready;
+   input wire		   scl_oe;
 
    //---------------------------------------------------------------------
    // registers and wires
@@ -88,7 +88,7 @@ module i2c_mstr(XRESET,
    //---------------------------------------------------------------------
    // parameters          
 
-   parameter       clk_cycle   = 50; 
+   parameter       clk_cycle   = 200; 
    parameter       delay       = 10; 
    parameter       reset_delay = 100;
    parameter       cycle_end   = 50;

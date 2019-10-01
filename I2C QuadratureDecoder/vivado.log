@@ -2,59 +2,2421 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep 20 13:16:55 2019
-# Process ID: 7568
+# Start of session at: Sat Sep 28 15:23:16 2019
+# Process ID: 7932
 # Current directory: C:/Repos/External test Repo/I2C QuadratureDecoder
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19744 C:\Repos\External test Repo\I2C QuadratureDecoder\I2C QuadratureDecoder.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11276 C:\Repos\External test Repo\I2C QuadratureDecoder\I2C QuadratureDecoder.xpr
 # Log file: C:/Repos/External test Repo/I2C QuadratureDecoder/vivado.log
 # Journal file: C:/Repos/External test Repo/I2C QuadratureDecoder\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Repos/robots/CMOD_A7/I2C QuadratureDecoder' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 732.055 ; gain = 79.559
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 759.578 ; gain = 116.277
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 13:19:23 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'scl' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:73]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'sda' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:74]
+ERROR: [VRFC 10-3594] non-net port 'sda' cannot be of mode inout [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:74]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'ready' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:75]
+ERROR: [VRFC 10-3594] non-net port 'ready' cannot be of mode input [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:75]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'scl_oe' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:76]
+ERROR: [VRFC 10-3594] non-net port 'scl_oe' cannot be of mode input [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:76]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'sda' is not permitted [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:135]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'scl' is not permitted [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:136]
+ERROR: [VRFC 10-2865] module 'i2c_mstr' ignored due to previous errors [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v:60]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'XRESET' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:67]
+ERROR: [VRFC 10-3594] non-net port 'XRESET' cannot be of mode input [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:67]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'ready' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:68]
+ERROR: [VRFC 10-3594] non-net port 'ready' cannot be of mode input [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:68]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'data_vld' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:73]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'scl_in' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:78]
+ERROR: [VRFC 10-3594] non-net port 'scl_in' cannot be of mode input [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:78]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'scl_oe' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:79]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'sda_in' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:80]
+ERROR: [VRFC 10-3594] non-net port 'sda_in' cannot be of mode input [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:80]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'sda_oe' when default_nettype is none [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:81]
+ERROR: [VRFC 10-845] illegal operand for operator | [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:111]
+ERROR: [VRFC 10-845] illegal operand for operator | [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:112]
+ERROR: [VRFC 10-845] illegal operand for operator ^ [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:123]
+ERROR: [VRFC 10-845] illegal operand for operator ! [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:244]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'sda_oe' is not permitted [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:296]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'scl_oe' is not permitted [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:299]
+ERROR: [VRFC 10-845] illegal operand for operator ~ [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:299]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'data_vld' is not permitted [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v:335]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'XRESET' on this module [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v:120]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Repos/External -notrace
+couldn't read file "C:/Repos/External": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 30 17:12:17 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_behav -key {Behavioral:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+xsim: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 855.969 ; gain = 21.508
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 855.969 ; gain = 21.508
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 921.832 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 921.832 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 921.832 ; gain = 0.000
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 928.750 ; gain = 1.219
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 933.645 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 933.645 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 935.293 ; gain = 0.000
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 935.852 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 935.852 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_behav -key {Behavioral:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_behav -key {Behavioral:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = xx
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1452: Data Read = xx
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+                1902: Data Read = xx
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hxx h0d
+                2352: Data Read = xx
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hxx h04
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = ff
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                1452: Data Read = ff
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                1902: Data Read = ff
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                2352: Data Read = ff
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1002: Data Read = ff
+                1002: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                1452: Data Read = ff
+                1452: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                1902: Data Read = ff
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                2352: Data Read = ff
+                2352: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1902: Data Read = ff
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+                1902: Data Read = ff
+                1902: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = xx
+                3602: Checking with memory contents...ERROR:DATA MISMATCH hxx h01
+                5402: Data Read = xx
+                5402: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = xx
+                3602: Checking with memory contents...ERROR:DATA MISMATCH hxx h01
+                5402: Data Read = xx
+                5402: Checking with memory contents...ERROR:DATA MISMATCH hxx h00
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 09
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h09 h00
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 09
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h09 h00
+run 4000 ns
+                7202: Data Read = 18
+                7202: Checking with memory contents...ERROR:DATA MISMATCH h18 h00
+                9002: Data Read = 09
+                9002: Checking with memory contents...ERROR:DATA MISMATCH h09 h0d
+                9500: Writing I2C Register to read from 01
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:91]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 09
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h09 h00
+run 4000 ns
+                7202: Data Read = 18
+                7202: Checking with memory contents...ERROR:DATA MISMATCH h18 h00
+                9002: Data Read = 09
+                9002: Checking with memory contents...ERROR:DATA MISMATCH h09 h0d
+                9500: Writing I2C Register to read from 01
+save_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:93]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_behav -key {Behavioral:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = ff
+                3602: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                5402: Data Read = ff
+                5402: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+run 4000 ns
+                7202: Data Read = ff
+                7202: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                9002: Data Read = ff
+                9002: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+                9500: Writing I2C Register to read from 01
+run all
+
+               12825: Reading I2C Register starting at 01
+               16702: Data Read = ff
+               16702: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+               18502: Data Read = ff
+               18502: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+               19050: Writing I2C Register to read from 0a
+
+               22325: Reading I2C Register starting at 0a
+               26202: Data Read = ff
+               26202: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+               28002: Data Read = ff
+               28002: Checking with memory contents...ERROR:DATA MISMATCH hff h01
+
+               28500: I2C Simulation Complete
+               28510: Number of Errors = 0
+$stop called at time : 28510 ns : File "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" Line 236
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'XRESET' [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v:93]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run all
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 09
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h09 h00
+                7202: Data Read = 18
+                7202: Checking with memory contents...ERROR:DATA MISMATCH h18 h00
+                9002: Data Read = 09
+                9002: Checking with memory contents...ERROR:DATA MISMATCH h09 h0d
+                9500: Writing I2C Register to read from 01
+
+               12825: Reading I2C Register starting at 01
+               16702: Data Read = 0e
+               16702: Checking with memory contents...ERROR:DATA MISMATCH h0e h0c
+               18502: Data Read = 08
+               18502: Checking with memory contents...ERROR:DATA MISMATCH h08 h0d
+               19050: Writing I2C Register to read from 0a
+
+               22325: Reading I2C Register starting at 0a
+               26202: Data Read = 00
+               26202: Checking with memory contents...ERROR:DATA MISMATCH h00 h0f
+               28002: Data Read = 00
+               28002: Checking with memory contents...ERROR:DATA MISMATCH h00 h00
+
+               28500: I2C Simulation Complete
+               28510: Number of Errors = 0
+$stop called at time : 28510 ns : File "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" Line 236
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 reset_run synth_1
 launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:33:19 2019] Launched synth_1...
+[Mon Sep 30 22:38:16 2019] Launched synth_1...
 Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_behav -key {Behavioral:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1567.059 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 09
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h09 h00
+run 4000 ns
+                7202: Data Read = 18
+                7202: Checking with memory contents...ERROR:DATA MISMATCH h18 h00
+                9002: Data Read = 09
+                9002: Checking with memory contents...ERROR:DATA MISMATCH h09 h0d
+                9500: Writing I2C Register to read from 01
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 reset_run synth_1
 launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:34:45 2019] Launched synth_1...
+[Mon Sep 30 22:42:44 2019] Launched synth_1...
 Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc]
+Finished Parsing XDC File [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1567.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1567.059 ; gain = 0.000
+reset_simulation -simset sim_1 -mode post-synthesis -type functional
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+close_design
+launch_simulation -mode post-synthesis -type functional
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc]
+Finished Parsing XDC File [C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1684.484 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim/i2c_peri_tb_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim/i2c_peri_tb_func_synth.v
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim/i2c.mem'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim/i2c_peri_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder_0
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder_1
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder_2
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot i2c_peri_tb_func_synth xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot i2c_peri_tb_func_synth xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.FDRE(IS_C_INVERTED=1'b1)
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.FDCE(IS_C_INVERTED=1'b1)
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.i2c_slave
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PULLUP
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.QuadratureDecoder_0
+Compiling module xil_defaultlib.QuadratureDecoder_1
+Compiling module xil_defaultlib.QuadratureDecoder_2
+Compiling module unisims_ver.IOBUF
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_func_synth
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Repos/External -notrace
+couldn't read file "C:/Repos/External": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 30 22:45:10 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_func_synth -key {Post-Synthesis:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+WARNING: Simulation object /i2c_peri_tb/u1/data_out was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/i2c/shift was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/mem was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/i_clk was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/i_quadA was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/i_quadB was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/i_index was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/last_state was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/o_count was not found in the design.
+WARNING: Simulation object /i2c_peri_tb/u1/q1/o_icount was not found in the design.
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1814.492 ; gain = 130.008
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1814.492 ; gain = 130.008
+run 4000 ns
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 07
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h07 h00
+run 4000 ns
+                7202: Data Read = 1c
+                7202: Checking with memory contents...ERROR:DATA MISMATCH h1c h00
+                9002: Data Read = 07
+                9002: Checking with memory contents...ERROR:DATA MISMATCH h07 h0d
+                9500: Writing I2C Register to read from 01
+run 4000 ns
+
+               12825: Reading I2C Register starting at 01
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1814.492 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1814.492 ; gain = 0.000
+[Mon Sep 30 22:47:21 2019] Launched impl_1...
+Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2c_peri_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim/i2c.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2c_peri_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/QuadratureDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module QuadratureDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_mstr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/new/i2c_quad_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_quad_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sources_1/imports/rd1054/source/verilog/i2c_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/sim_1/imports/verilog/i2c_peri_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_peri_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+"xelab -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5ea34ca6f3604e7ba1397c98b822aa64 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot i2c_peri_tb_behav xil_defaultlib.i2c_peri_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.PULLUP
+Compiling module xil_defaultlib.i2c_slave
+Compiling module xil_defaultlib.QuadratureDecoder
+Compiling module xil_defaultlib.i2c_quad_decode
+Compiling module xil_defaultlib.i2c_mstr_default
+Compiling module xil_defaultlib.i2c_peri_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2c_peri_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2c_peri_tb_behav -key {Behavioral:sim_1:Functional:i2c_peri_tb} -tclbatch {i2c_peri_tb.tcl} -view {{C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config {C:/Repos/External test Repo/I2C QuadratureDecoder/i2c_peri_tb_behav.wcfg}
+source i2c_peri_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2500ns
+                   0: Starting I2C Slave Simulation
+
+                   0: Initializing Test Bench
+
+                 150: Reading I2C Register
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2c_peri_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2500ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1814.492 ; gain = 0.000
+run 4000 ns
+                3602: Data Read = 1e
+                3602: Checking with memory contents...ERROR:DATA MISMATCH h1e h01
+                5402: Data Read = 09
+                5402: Checking with memory contents...ERROR:DATA MISMATCH h09 h00
+run 4000 ns
+                7202: Data Read = 18
+                7202: Checking with memory contents...ERROR:DATA MISMATCH h18 h00
+                9002: Data Read = 09
+                9002: Checking with memory contents...ERROR:DATA MISMATCH h09 h0d
+                9500: Writing I2C Register to read from 01
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:37:26 2019] Launched synth_1...
+launch_runs impl_1 -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Sep 30 23:10:21 2019] Launched synth_1...
 Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:45:26 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:47:19 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:50:58 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:53:54 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:56:57 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Sep 20 15:58:06 2019] Launched synth_1...
-Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/synth_1/runme.log
+[Mon Sep 30 23:10:21 2019] Launched impl_1...
+Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2127.270 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 2127.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2127.270 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2176.070 ; gain = 361.578
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2503.051 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2503.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2503.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Sep 30 23:17:42 2019] Launched impl_1...
+Run output will be captured here: C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.runs/impl_1/runme.log

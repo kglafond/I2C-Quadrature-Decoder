@@ -59,25 +59,26 @@
 //-------------------------------------------------------------------------
 
 `timescale 1ns/1ps
+`default_nettype none
 
-module i2c_slave (XRESET, ready, start, stop, data_in, data_out, r_w, data_vld, scl_in, scl_oe, sda_in, sda_oe);
+module i2c_slave (ready, start, stop, data_in, data_out, r_w, data_vld, scl_in, scl_oe, sda_in, sda_oe);
       
 // generic ports
-input        XRESET; 		                       // System Reset
-input 	     ready; 						       // back end system ready signal
+reg   XRESET = 0; 		                       // System Reset
+input wire 	 ready; 						       // back end system ready signal
 //input  [6:0] I2C_SLAVE_ADDR;                     // I2C addr from regmap
 input  [7:0] data_in; 	                           // parallel data in
 output [7:0] data_out; 	                           // parallel data out 
 output       r_w;                                  // read/write signal to the reg_map bloc
-output       data_vld;		                       // data valid from i2c 
+output wire  data_vld;		                       // data valid from i2c 
 output       start;                                // start of the i2c cycle
 output       stop;					               // stop the i2c cycle
 
 // i2c ports
-input        scl_in;						       // SCL clock line 
-output 	     scl_oe;                                           
-input        sda_in;		                       // i2c serial data line in  
-output       sda_oe;                               // controls sda output enable
+input  wire  scl_in;						       // SCL clock line 
+output wire	 scl_oe;                                           
+input  wire  sda_in;		                       // i2c serial data line in  
+output wire  sda_oe;                               // controls sda output enable
 
 
 /*****************************************
@@ -92,14 +93,18 @@ parameter idle=5'h0, addr7=5'h1, addr6=5'h2, addr5=5'h3,
           data5=5'hc, data4=5'hd, data3=5'he, data2=5'hf, 
           data1=5'h10, data0=5'h11;
 
-reg [7:0] data_int;                                // internal data register (ie holds address to read from on next read, or addr to write to on next write)
-reg start, stop;				                   // start and stop detection of I2C cycles
+reg [7:0] data_int = 0;                                // internal data register (ie holds address to read from on next read, or addr to write to on next write)
+reg start=1'b0, stop=1'b0;				                   // start and stop detection of I2C cycles
 reg [4:0] sm_state; 				               // state machine current state
-reg [7:0] shift;				                   // shift register attached to I2C controller
+reg [7:0] shift = 0;				                   // shift register attached to I2C controller
 reg r_w;		 			                       // indicate read/write operation (write = 0, read = 1)
 reg ack_out;					                   // acknowledge output from slave to master (send ACK)
-reg sda_en;	      			                       // OE control of sda signal, could use open drain feature
-reg vld_plse;		       	                       // data valid pulse (when data in shift register valid/complete)
+reg sda_en = 0;	      			                       // OE control of sda signal, could use open drain feature
+reg vld_plse = 0;		       	                       // data valid pulse (when data in shift register valid/complete)
+
+initial sm_state <=  idle;                                          // reset fsm to idle
+initial r_w      <=  1'b1;				                            // initial value for read
+initial vld_plse <=  1'b0; 
 
 wire start_rst;				                       // reset signals for START and STOP bits
 
@@ -116,16 +121,15 @@ wire stop_async_rst = start | XRESET;                              // same for s
  falling edges (sda and scl)
 ******************************************/
 reg sda_f = 1'b0;                     
-wire #1 sda_clk;
+wire sda_clk;
 
 //xor u1 (sda_clk, sda_f, sda_in);                                   // generate a narrow pulse based on the delay between sda_in and sda_f (detect edges in sda level)
 assign sda_clk = sda_f ^ sda_in;
 
-always @ (*)
-//always @ (sda_clk or start_async_rst or XRESET)	   // use the narrow clock pulse to delay sda_in through a register NO EDGE ON XRESET
+//always @ (*)
+always @ (sda_clk or start_async_rst)	   // use the narrow clock pulse to delay sda_in through a register NO EDGE ON XRESET
 begin
-    if (XRESET) sda_f <= 1'b0; 
-	else if (start_async_rst)
+    if (start_async_rst)
 		begin
 		if(sda_in)
 			sda_f = #1 1'b1;
@@ -164,14 +168,7 @@ FSM check the addr byte and track rw opp
 *****************************************/
 
 always @(posedge scl_in)
-begin
-	if (XRESET) 							
-	  begin
-		sm_state <=  idle;                                          // reset fsm to idle
-		r_w      <=  1'b1;				                            // initial value for read
-        vld_plse <=  1'b0;                                     
-	  end                                                                   
-	else                                                                    
+begin                                                                 
 	 	case (sm_state)                                               
 
 			idle : begin
@@ -258,9 +255,6 @@ end
 	                                                                       
 always @(negedge scl_in)                        //  (ack_out is high to send out ACK)
 begin	 					                                      // data should be ready on SDA line when SCL is high
-	if (XRESET)                                                            
-	   ack_out <= #1 0;                                                       
-	else 
 	if (sm_state == det_rw)			                              // Send Ack when Master sends this device's address                 
 	    ack_out <= #1 1'b1;                                                    
 	else if (sm_state == data0)                                   // If Data Byte recieved                              
@@ -278,9 +272,7 @@ end
 ********************************************/                                                                               
 always @(negedge scl_in)                                        
 begin                                                                     
-	if (XRESET)                                                            
-		sda_en <= 0;                                                   
-	else if (r_w && (sm_state == ack))                            // If Read and doing address Ack, SDA is data_in high bit (first data bit gets shifted out)                                      
+	if (r_w && (sm_state == ack))                            // If Read and doing address Ack, SDA is data_in high bit (first data bit gets shifted out)                                      
 		sda_en <= #1 !data_in[7];
 	else if (r_w && ((sm_state > ack) && (sm_state < data0)))     // If Read and sending shift resigter (data phase), shift out sift register onto SDA
 	    sda_en <= #1 ~shift[6];
@@ -302,10 +294,7 @@ assign scl_oe = (sm_state == ack) & (~ready);					 // if scl_oe = 1, then scl is
 *******************************/
 always @(negedge scl_in)
 begin
-	if (XRESET)                                                  // Clear shift register on RESET
-		shift <= #1 8'b0;
-	else 
-		if ((sm_state == idle) && (start))                       // Start shifting bits from SDA into shift register on Start
+	if ((sm_state == idle) && (start))                       // Start shifting bits from SDA into shift register on Start
 			shift[0] <= #1 sda_in;
 		else if ((sm_state >= addr7) && (sm_state <= addr1))     // Only use the first bit of shift register until sure address matches this device
 			shift[0] <= #1 sda_in;
@@ -322,10 +311,7 @@ end
  data output register
 ********************************************/
 always @ (posedge scl_in)				
-begin
-	if (XRESET) 										         // Clear internal regsiter on RESET
-		data_int <=  #1 8'h0;
-	else 
+begin 
 	   if (!r_w && ack_out && vld_plse)                          // If Write (slave receive) and full byte received, copy byte from shift register to data_out
 		data_int <=  #1 shift;
 end

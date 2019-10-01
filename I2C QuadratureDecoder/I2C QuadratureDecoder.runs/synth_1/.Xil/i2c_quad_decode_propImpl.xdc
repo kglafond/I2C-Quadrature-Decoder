@@ -1,8 +1,6 @@
 set_property SRC_FILE_INFO {cfile:{C:/Repos/External test Repo/I2C QuadratureDecoder/I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc} rfile:{../../../I2C QuadratureDecoder.srcs/constrs_1/new/CMOD_A7_revB.xdc} id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN L17 IOSTANDARD LVCMOS33} [get_ports sclk]
-set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN A18 IOSTANDARD LVCMOS33} [get_ports XRESET]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN M3 IOSTANDARD LVCMOS33} [get_ports quadA1]
 set_property src_info {type:XDC file:1 line:46 export:INPUT save:INPUT read:READ} [current_design]

@@ -17,7 +17,7 @@ create_clock -period 83.330 -name sys_clk_pin -waveform {0.000 41.660} -add [get
 
 
 ## Buttons
-set_property -dict {PACKAGE_PIN A18 IOSTANDARD LVCMOS33} [get_ports XRESET]
+#set_property -dict {PACKAGE_PIN A18 IOSTANDARD LVCMOS33} [get_ports XRESET]
 #set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { btn[1] }]; #IO_L19P_T3_16 Sch=btn[1]
 
 

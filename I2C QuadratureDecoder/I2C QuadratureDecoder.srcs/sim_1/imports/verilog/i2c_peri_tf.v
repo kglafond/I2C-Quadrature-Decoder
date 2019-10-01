@@ -51,7 +51,7 @@
 //-------------------------------------------------------------------------
 
 `timescale 1 ns /  100 ps
-//`include "i2c_mstr.v"
+`default_nettype none
 
 
 module i2c_peri_tb;
@@ -98,16 +98,16 @@ initial
 	index4 = 0;
 	 
 	#500 index1 = 1'b1; // Cause q1 calibration
-	#510 index1 = 1'b0;
+	#50 index1 = 1'b0;
 	
 	#300 index2 = 1'b1; // Cause q1 calibration
-	#310 index2 = 1'b0;
+	#50 index2 = 1'b0;
 	
 	#600 index3 = 1'b1; // Cause q1 calibration
-	#610 index3 = 1'b0;
+	#50 index3 = 1'b0;
 	
 	#400 index4 = 1'b1; // Cause q1 calibration
-	#410 index4 = 1'b0;
+	#50 index4 = 1'b0;
 	//for (i = 15; i >= 0; i = i - 1) begin	  
 	//	$display("INITIIAL MEMORY CONTENTS AT LOCATION %h : %h",i,mem[i]);
 	//end
@@ -117,8 +117,7 @@ initial
   end	 
 
 
-i2c_quad_decode u1(.XRESET (rst),
-                   .sclk   (sclk),
+i2c_quad_decode u1(.sclk   (sclk),
                    .sda    (sda),
                    .scl    (scl),
                    .quadA1 (quadA1), .quadB1 (quadB1), .index1 (index1),
@@ -140,12 +139,21 @@ always
 	#15 sclk = ~sclk;      // System clock
 	
 // Simulate wheels turning
+integer i;
 always @(posedge sclk)
 begin // Fwd
-    quadB1 = !quadB1; 
-    #15;
-    quadA1 = !quadA1;
-    #15;
+    for (i=0; i<9; i=i+1) begin
+        quadB1 = !quadB1; 
+        #100;
+        quadA1 = !quadA1;
+        #100;
+    end
+    for (i=0; i<9; i=i+1) begin
+    quadA1 = !quadA1; 
+    #100;
+    quadB1 = !quadB1;
+    #100;
+    end
 end
 
 always @(posedge sclk)

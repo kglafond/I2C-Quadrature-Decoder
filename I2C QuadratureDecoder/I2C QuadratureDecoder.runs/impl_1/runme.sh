@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log i2c_quad_decode.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source i2c_quad_decode.tcl -notrace
 
 
